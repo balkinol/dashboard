@@ -1,0 +1,232 @@
+:root {
+  --primary-color: #13174d;
+  --secondary-color: #800000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+}
+
+/* Header */
+
+header {
+  background: var(--secondary-color);
+  position: fixed;
+  height: 10vh;
+  width: 100%;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+header h1 {
+  margin: 0.5rem 2rem 0;
+  text-transform: uppercase;
+}
+
+/* Check Sidebar */
+
+.sidebar label {
+  position: fixed;
+  left: 1rem;
+  top: 3.5vh;
+  z-index: 3;
+  visibility: hidden;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.sidebar label .btn-line {
+  width: 28px;
+  height: 3px;
+  background: #fff;
+  margin-bottom: 5px;
+  transition: all 0.5s;
+}
+
+#check {
+  display: none;
+}
+
+#check:checked ~ label .btn-line {
+  transform: rotate(180deg);
+}
+
+#check:checked ~ label .btn-line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+#check:checked ~ label .btn-line:nth-child(2) {
+  opacity: 0;
+}
+
+#check:checked ~ label .btn-line:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* Check Search Bar */
+
+.search-bar {
+  position: fixed;
+  z-index: 3;
+  right: 0;
+  top: 2.5vh;
+}
+
+#search {
+  display: none;
+}
+
+#search:checked ~ #search-input {
+  opacity: 1;
+}
+
+#search-input {
+  border-radius: 20px;
+  width: 300px;
+  padding: 0.5rem 1rem;
+  border: 1px solid #f4f4f4;
+  outline: none;
+  transition: 0.5s;
+  position: absolute;
+  opacity: 0;
+  right: 0;
+  margin: 0 3.2rem 0 0;
+  pointer-events: none;
+}
+
+.search-bar label {
+  margin-right: 1rem;
+}
+
+/* Sidebar */
+
+.sidebar .profile {
+  display: flex;
+  align-items: center;
+  justify-content: first baseline;
+  margin: 1rem;
+}
+
+.sidebar .profile .img {
+  background: url(../img/profile.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid var(--secondary-color);
+  margin: 0 1rem;
+}
+
+.menu-nav {
+  height: 90vh;
+  width: 25vw;
+  background: var(--primary-color);
+  position: fixed;
+  top: 10vh;
+}
+
+.menu-nav ul li i {
+  margin-right: 1.5rem;
+}
+
+.menu-nav ul li {
+  margin-bottom: 0.8rem;
+  margin-left: 3rem;
+}
+
+.menu-nav ul li a {
+  color: #fff;
+  transition: all 0.5s;
+}
+
+.menu-nav ul li a:hover {
+  color: var(--secondary-color);
+  padding-left: 10px;
+}
+
+/* Main Containt */
+
+.main-content {
+  right: 0;
+  top: 15vh;
+  width: 70vw;
+  margin-right: 2rem;
+  position: fixed;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+}
+
+.main-content .text {
+  text-align: center;
+  margin: 0.4rem;
+}
+
+.properties {
+  background: url(../img/house1.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 30vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.properties i {
+  margin-left: 2rem;
+}
+
+.locations {
+  background: url(../img/house2.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 30vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.locations .text {
+  margin-right: 2rem;
+}
+
+.contacts {
+  background: url(../img/shakehands.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 30vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.contacts i {
+  margin-left: 2rem;
+}
+
+.schedules {
+  background: url(../img/calendar.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 30vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.schedules .text {
+  margin-right: 2rem;
+}

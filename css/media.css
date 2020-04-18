@@ -1,0 +1,90 @@
+@media (max-width: 768px) {
+  header {
+    justify-content: center;
+  }
+
+  .sidebar label {
+    visibility: visible;
+  }
+
+  #check:checked ~ .menu-nav {
+    transform: translateX(0);
+  }
+
+  .menu-nav {
+    z-index: 1;
+    width: 40%;
+    transform: translateX(-60vw);
+    transition: all 0.5s;
+  }
+
+  .main-content {
+    width: 100%;
+    margin: 0;
+    grid-gap: 0;
+    top: 10vh;
+    grid-template-areas: 'box1 box2' 'box3 box3' 'box4 box4';
+  }
+
+  .properties {
+    grid-area: box1;
+  }
+
+  .locations {
+    grid-area: box2;
+  }
+
+  .contacts {
+    grid-area: box3;
+  }
+
+  .schedules {
+    grid-area: box4;
+  }
+}
+
+@media (max-width: 500px) {
+  .sidebar .profile {
+    flex-direction: column;
+    text-align: center;
+    margin: 0.3rem 0 0.5rem 0;
+  }
+
+  #search-input {
+    width: 200px;
+  }
+
+  .menu-nav {
+    width: 60%;
+  }
+
+  .menu-nav ul li {
+    margin-bottom: 0.6rem;
+    margin-left: 2.5rem;
+  }
+
+  .main-content {
+    grid-template-columns: 1fr;
+    grid-template-areas: 'box1' 'box2' 'box3' 'box4';
+  }
+
+  .properties {
+    grid-area: box1;
+    height: 23vh;
+  }
+
+  .locations {
+    grid-area: box2;
+    height: 23vh;
+  }
+
+  .contacts {
+    grid-area: box3;
+    height: 23vh;
+  }
+
+  .schedules {
+    grid-area: box4;
+    height: 23vh;
+  }
+}
